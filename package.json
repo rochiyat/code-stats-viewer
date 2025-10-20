@@ -1,0 +1,174 @@
+{
+  "name": "code-stats-viewer",
+  "displayName": "Code Stats Viewer",
+  "description": "Real-time code statistics viewer with export functionality and custom exclude patterns",
+  "version": "1.1.0",
+  "publisher": "baituna-code",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "statistics",
+    "code stats",
+    "metrics",
+    "analytics",
+    "export"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "code-stats-viewer.showStats",
+        "title": "Show Detailed Statistics",
+        "category": "Code Stats",
+        "icon": "$(graph-line)"
+      },
+      {
+        "command": "code-stats-viewer.refresh",
+        "title": "Refresh Statistics",
+        "category": "Code Stats",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "code-stats-viewer.exportCSV",
+        "title": "Export to CSV",
+        "category": "Code Stats",
+        "icon": "$(export)"
+      },
+      {
+        "command": "code-stats-viewer.exportJSON",
+        "title": "Export to JSON",
+        "category": "Code Stats",
+        "icon": "$(json)"
+      },
+      {
+        "command": "code-stats-viewer.changeSidebarMax",
+        "title": "Change Sidebar Max Files",
+        "category": "Code Stats"
+      },
+      {
+        "command": "code-stats-viewer.changeExportMax",
+        "title": "Change Export Max Files",
+        "category": "Code Stats"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "code-stats",
+          "title": "Code Stats",
+          "icon": "$(graph-line)"
+        }
+      ]
+    },
+    "views": {
+      "code-stats": [
+        {
+          "id": "codeStatsView",
+          "name": "Statistics",
+          "icon": "$(graph-line)"
+        }
+      ]
+    },
+    "menus": {
+      "view/title": [
+        {
+          "command": "code-stats-viewer.refresh",
+          "when": "view == codeStatsView",
+          "group": "navigation@1"
+        },
+        {
+          "command": "code-stats-viewer.showStats",
+          "when": "view == codeStatsView",
+          "group": "navigation@2"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Code Stats Viewer",
+      "properties": {
+        "codeStatsViewer.excludeDirs": {
+          "type": "array",
+          "default": [
+            "node_modules",
+            ".git",
+            "dist",
+            "build",
+            "coverage",
+            ".vscode",
+            ".next",
+            "out",
+            "vendor"
+          ],
+          "description": "Directories to exclude from statistics"
+        },
+        "codeStatsViewer.excludePatterns": {
+          "type": "array",
+          "default": [
+            "*.min.js",
+            "*.min.css",
+            "*.map"
+          ],
+          "description": "File patterns to exclude (supports * and ? wildcards)"
+        },
+        "codeStatsViewer.includedExtensions": {
+          "type": "array",
+          "default": [
+            ".js",
+            ".ts",
+            ".jsx",
+            ".tsx",
+            ".py",
+            ".java",
+            ".c",
+            ".cpp",
+            ".cs",
+            ".php",
+            ".rb",
+            ".go",
+            ".rs",
+            ".swift",
+            ".kt",
+            ".dart",
+            ".vue",
+            ".svelte",
+            ".html",
+            ".css",
+            ".scss"
+          ],
+          "description": "File extensions to include in statistics"
+        },
+        "codeStatsViewer.maxLargestFilesSidebar": {
+          "type": "number",
+          "default": 10,
+          "minimum": 1,
+          "maximum": 100,
+          "description": "Maximum number of largest files to show in sidebar (1-100)"
+        },
+        "codeStatsViewer.maxLargestFilesExport": {
+          "type": "number",
+          "default": 20,
+          "minimum": 1,
+          "maximum": 1000,
+          "description": "Maximum number of largest files to include in exports (1-1000)"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {},
+  "dependencies": {},
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/code-stats-viewer"
+  },
+  "license": "MIT"
+}

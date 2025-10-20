@@ -1,0 +1,292 @@
+{
+  "configurations": [
+    {
+      "name": "React/Next.js Project",
+      "description": "Configuration for React and Next.js applications",
+      "settings": {
+        "codeStatsViewer.excludeDirs": [
+          "node_modules",
+          ".next",
+          "out",
+          "build",
+          "dist",
+          ".vercel",
+          "coverage",
+          ".cache"
+        ],
+        "codeStatsViewer.excludePatterns": [
+          "*.min.js",
+          "*.min.css",
+          "*.test.js",
+          "*.test.jsx",
+          "*.spec.js",
+          "*.spec.jsx",
+          "*.map"
+        ],
+        "codeStatsViewer.includedExtensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx",
+          ".css",
+          ".scss",
+          ".json"
+        ]
+      }
+    },
+    {
+      "name": "Python/Django Project",
+      "description": "Configuration for Python and Django applications",
+      "settings": {
+        "codeStatsViewer.excludeDirs": [
+          "__pycache__",
+          "venv",
+          ".venv",
+          "env",
+          ".env",
+          "dist",
+          "build",
+          "*.egg-info",
+          ".pytest_cache",
+          ".mypy_cache",
+          "migrations"
+        ],
+        "codeStatsViewer.excludePatterns": [
+          "*.pyc",
+          "*.pyo",
+          "*.pyd",
+          "test_*.py",
+          "*_test.py"
+        ],
+        "codeStatsViewer.includedExtensions": [
+          ".py",
+          ".pyx",
+          ".pyi"
+        ]
+      }
+    },
+    {
+      "name": "Java/Spring Boot Project",
+      "description": "Configuration for Java and Spring Boot applications",
+      "settings": {
+        "codeStatsViewer.excludeDirs": [
+          "target",
+          ".gradle",
+          "build",
+          "bin",
+          ".mvn",
+          ".idea",
+          "out"
+        ],
+        "codeStatsViewer.excludePatterns": [
+          "*Test.java",
+          "*Tests.java",
+          "*.class",
+          "*.jar",
+          "*.war"
+        ],
+        "codeStatsViewer.includedExtensions": [
+          ".java",
+          ".kt",
+          ".xml",
+          ".properties"
+        ]
+      }
+    },
+    {
+      "name": "Node.js/Express Project",
+      "description": "Configuration for Node.js backend applications",
+      "settings": {
+        "codeStatsViewer.excludeDirs": [
+          "node_modules",
+          "dist",
+          "build",
+          "coverage",
+          "logs",
+          ".cache"
+        ],
+        "codeStatsViewer.excludePatterns": [
+          "*.min.js",
+          "*.test.js",
+          "*.spec.js",
+          "*.map",
+          "*.log"
+        ],
+        "codeStatsViewer.includedExtensions": [
+          ".js",
+          ".ts",
+          ".json"
+        ]
+      }
+    },
+    {
+      "name": "Vue.js Project",
+      "description": "Configuration for Vue.js applications",
+      "settings": {
+        "codeStatsViewer.excludeDirs": [
+          "node_modules",
+          "dist",
+          "build",
+          ".nuxt",
+          ".output",
+          "coverage"
+        ],
+        "codeStatsViewer.excludePatterns": [
+          "*.min.js",
+          "*.min.css",
+          "*.test.js",
+          "*.spec.js",
+          "*.map"
+        ],
+        "codeStatsViewer.includedExtensions": [
+          ".vue",
+          ".js",
+          ".ts",
+          ".css",
+          ".scss"
+        ]
+      }
+    },
+    {
+      "name": "Go Project",
+      "description": "Configuration for Go applications",
+      "settings": {
+        "codeStatsViewer.excludeDirs": [
+          "vendor",
+          "bin",
+          "pkg",
+          ".git",
+          "testdata"
+        ],
+        "codeStatsViewer.excludePatterns": [
+          "*_test.go",
+          "*.exe",
+          "*.out"
+        ],
+        "codeStatsViewer.includedExtensions": [
+          ".go",
+          ".mod",
+          ".sum"
+        ]
+      }
+    },
+    {
+      "name": "Rust Project",
+      "description": "Configuration for Rust applications",
+      "settings": {
+        "codeStatsViewer.excludeDirs": [
+          "target",
+          ".cargo",
+          "node_modules"
+        ],
+        "codeStatsViewer.excludePatterns": [
+          "*.rlib",
+          "*.rmeta",
+          "*.exe"
+        ],
+        "codeStatsViewer.includedExtensions": [
+          ".rs",
+          ".toml"
+        ]
+      }
+    },
+    {
+      "name": "PHP/Laravel Project",
+      "description": "Configuration for PHP and Laravel applications",
+      "settings": {
+        "codeStatsViewer.excludeDirs": [
+          "vendor",
+          "node_modules",
+          "storage",
+          "bootstrap/cache",
+          "public/build",
+          ".phpunit.cache"
+        ],
+        "codeStatsViewer.excludePatterns": [
+          "*Test.php",
+          "*.min.js",
+          "*.min.css",
+          "*.cache"
+        ],
+        "codeStatsViewer.includedExtensions": [
+          ".php",
+          ".blade.php",
+          ".js",
+          ".css"
+        ]
+      }
+    },
+    {
+      "name": "Minimal (All Languages)",
+      "description": "Minimal exclusions for comprehensive analysis",
+      "settings": {
+        "codeStatsViewer.excludeDirs": [
+          "node_modules",
+          ".git"
+        ],
+        "codeStatsViewer.excludePatterns": [
+          "*.min.js",
+          "*.map"
+        ],
+        "codeStatsViewer.includedExtensions": [
+          ".js",
+          ".ts",
+          ".jsx",
+          ".tsx",
+          ".py",
+          ".java",
+          ".c",
+          ".cpp",
+          ".cs",
+          ".php",
+          ".rb",
+          ".go",
+          ".rs",
+          ".swift",
+          ".kt",
+          ".dart",
+          ".vue",
+          ".svelte",
+          ".html",
+          ".css",
+          ".scss"
+        ]
+      }
+    }
+  ],
+  "usage": {
+    "description": "Copy the settings object from any configuration above and paste it into your VS Code settings.json file (Workspace or User settings)",
+    "steps": [
+      "1. Open VS Code Settings: File > Preferences > Settings (or Ctrl+,)",
+      "2. Click the '{}' icon in the top-right to open settings.json",
+      "3. Copy the desired settings from above",
+      "4. Paste into your settings.json",
+      "5. Save the file - Code Stats Viewer will auto-refresh"
+    ]
+  },
+  "customization": {
+    "excludeDirs": {
+      "description": "Add directory names that should be completely skipped during analysis",
+      "examples": [
+        "node_modules - npm packages",
+        "vendor - Composer/Go packages",
+        "target - Java build output",
+        "dist - Build output",
+        "__pycache__ - Python cache"
+      ]
+    },
+    "excludePatterns": {
+      "description": "Add file patterns using wildcards (* = any chars, ? = single char)",
+      "examples": [
+        "*.min.js - Minified JavaScript",
+        "*.test.* - Test files",
+        "temp-* - Temporary files",
+        "*-backup.* - Backup files"
+      ]
+    },
+    "includedExtensions": {
+      "description": "Only files with these extensions will be analyzed",
+      "tip": "Add custom extensions like .proto, .graphql, .yaml, etc."
+    }
+  }
+}
