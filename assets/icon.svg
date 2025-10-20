@@ -1,0 +1,79 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle with Gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A90E2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#357ABD;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="barGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E8F4FF;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="2" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background Circle -->
+  <circle cx="64" cy="64" r="60" fill="url(#bgGradient)" filter="url(#shadow)"/>
+  
+  <!-- Bar Chart Bars -->
+  <g transform="translate(24, 24)">
+    <!-- Bar 1 (shortest) -->
+    <rect x="6" y="50" width="14" height="26" rx="2" fill="url(#barGradient)" opacity="0.95">
+      <animate attributeName="height" values="26;30;26" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="50;46;50" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    
+    <!-- Bar 2 -->
+    <rect x="26" y="36" width="14" height="40" rx="2" fill="url(#barGradient)" opacity="0.95">
+      <animate attributeName="height" values="40;44;40" dur="2s" begin="0.2s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="36;32;36" dur="2s" begin="0.2s" repeatCount="indefinite"/>
+    </rect>
+    
+    <!-- Bar 3 -->
+    <rect x="46" y="22" width="14" height="54" rx="2" fill="url(#barGradient)" opacity="0.95">
+      <animate attributeName="height" values="54;58;54" dur="2s" begin="0.4s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="22;18;22" dur="2s" begin="0.4s" repeatCount="indefinite"/>
+    </rect>
+    
+    <!-- Bar 4 (tallest) -->
+    <rect x="66" y="8" width="14" height="68" rx="2" fill="url(#barGradient)" opacity="0.95">
+      <animate attributeName="height" values="68;72;68" dur="2s" begin="0.6s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="8;4;8" dur="2s" begin="0.6s" repeatCount="indefinite"/>
+    </rect>
+    
+    <!-- Trend Line -->
+    <path d="M 13 63 L 33 49 L 53 35 L 73 21" 
+          stroke="#FFFFFF" 
+          stroke-width="3" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" 
+          fill="none"
+          opacity="0.9">
+      <animate attributeName="stroke-dasharray" values="0,100;100,0" dur="3s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Data Points on Line -->
+    <circle cx="13" cy="63" r="3.5" fill="#FFFFFF" opacity="0.95"/>
+    <circle cx="33" cy="49" r="3.5" fill="#FFFFFF" opacity="0.95"/>
+    <circle cx="53" cy="35" r="3.5" fill="#FFFFFF" opacity="0.95"/>
+    <circle cx="73" cy="21" r="3.5" fill="#FFFFFF" opacity="0.95">
+      <animate attributeName="r" values="3.5;5;3.5" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Code Brackets (subtle detail) -->
+  <text x="18" y="108" font-family="monospace" font-size="20" fill="#FFFFFF" opacity="0.6" font-weight="bold">&lt;/&gt;</text>
+  
+  <!-- Statistics Symbol -->
+  <text x="92" y="26" font-family="Arial" font-size="18" fill="#FFFFFF" opacity="0.7" font-weight="bold">Σ</text>
+</svg>

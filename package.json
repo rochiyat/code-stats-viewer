@@ -170,5 +170,9 @@
     "type": "git",
     "url": "https://github.com/rochiyat/code-stats-viewer"
   },
+  "bugs": {
+    "url": "https://github.com/rochiyat/code-stats-viewer/issues"
+  },
+  "homepage": "https://github.com/rochiyat/code-stats-viewer#readme",
   "license": "MIT"
 }
