@@ -3,7 +3,7 @@
   "displayName": "Code Stats Viewer",
   "description": "Real-time code statistics viewer with export functionality and custom exclude patterns",
   "version": "1.1.0",
-  "publisher": "baituna-code",
+  "publisher": "BaitunaCode",
   "engines": {
     "vscode": "^1.75.0"
   },
